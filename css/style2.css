@@ -1,0 +1,324 @@
+:root {
+    --white: white;
+    --grey: #9F9F9F;
+    --black: black;
+    --myBlueLight: #2F7493;
+    --myBlueDark: #0F3A43;
+    --dot-dark-dark-blue: #121C2F;
+    --dot-dark-blue: #2F7493;
+    --dot-light-blue: #51AFDB;
+    --dot-olive: #77774B;
+    --dot-cream: #E7E7C6;
+    --dot-grey: #9E998F;
+    --dot-purple: #552A52;
+    --dot-green: #95BC9D;
+    --dot-aqua: #6BB2A3;
+    --dot-orange: #F5B366;
+    --dot-peach: #E89279;
+}
+
+:root {
+    --primary-font: "Helvetica", sans-serif;
+    --secondary-font: "Helvetica Neue", sans-serif;
+
+    --xxl-text: 4.5rem;
+    --xl-text: 3rem;
+    --l-text: 1.9rem;
+    --nav-text: 1.6rem;
+    --regular-text: 1.24rem;
+    --small-text: 0.8em;
+    --xs-text: 0.7em;
+    --xxs-text: 0.6em;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--white)
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+h1 {
+    font-size: var(--xl-text)
+}
+
+html {
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: var(--l-text);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 0%, rgba(6, 25, 29, 1) 77%, rgba(19, 85, 99, 1) 92%, rgba(34, 150, 175, 1) 100%) !important;
+    color: var(--white);
+}
+
+
+/* -------------------NAVBAR-------------------*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.topnav {
+    /* display: flex;
+    flex-direction: row; */
+    position: relative;
+    height: 10vw;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav-left {
+    float: left;
+    transform: translateY(70%);
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered img {
+    max-width: 40%;
+    float: none;
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    padding-top: 0.5em;
+    transform: translate(-50%, -50%);
+}
+
+.topnav2{
+
+}
+
+.center img{
+    max-width: 1vw;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+    padding-right: 2em;
+    transform: translateY(70%);
+}
+
+/* Dropdown categories styling */
+.dropdown-categories>ul {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 85px;
+}
+
+.dropdown-categories li {
+    margin: 25px;
+}
+
+/* Icon positioning  */
+.dropdown ion-icon {
+    font-size: 3vh;
+}
+
+/* GUITARS DROP DOWN MENU ON HOVER */
+.dropdown-trigger {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    /* makes it dissapear until hovered over */
+    transform: scale(0);
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown-trigger:hover .dropdown-content {
+    transform: scale(1);
+}
+
+/* SEARCH FIELD */
+.site-search {
+    background: black;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.feature-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+
+.feature-header{
+   margin-top: 1em;
+   width: 100vw;
+}
+
+.feature-header h2{
+    padding: 0.5em;
+}
+
+.feature-header i{
+    margin: 0.5em;
+}
+
+.product-tile-wrap {
+    position: relative;
+    display: flex;
+    padding-left: 20rem;
+    max-width: 100vw;
+    overflow: auto;
+    height: 25em;
+}
+
+.tile-container {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.product-tile-img i{
+    font-size: 4em;
+}
+
+.outside-box-reviews{
+    height: 20.5rem;
+    width: 17rem;
+    margin-right: 2em;
+    border-left: 1px solid white;
+}
+
+.outside-box-text{
+    margin-left: 1.2em;
+    line-height: 1.2em;
+}
+
+.reviewer-name{
+    color: var(--grey);
+    margin-bottom: 0.5em;
+}
+
+.product-tile-m {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    height: 14rem;
+    width: 14rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------SIDE NAV------------------- */
+
+#sidenav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    overflow-x: hidden;
+    width: 40%;
+    height: 100%;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    z-index: 1;
+    transition: all ease-in-out 200ms;
+    -webkit-transition: all ease-in-out 200ms;
+}
+
+#toggleClose{
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    cursor: pointer;
+    border: 10px solid white;
+    border-radius: 2px;
+    transition: all ease-in-out 200ms;
+    -webkit-transition: all ease-in-out 200ms;
+}
+
+#toggleClose:hover{
+    opacity: 0.7;
+}
+
+#sidenav li {
+    margin-bottom: 0.4vw;
+}
+
+#sidenav hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.shop-dropdown-child {
+    margin-left: 5px;
+    margin-top: 1vh;
+    vertical-align: middle;
+}
+
+.shop-dropdown-child ion-icon {
+    position: relative;
+    margin-right: 1vw;
+}
+
+.shop-dropdown-child li {
+    margin: -0.2vw;
+}
+
+.cluster-one {
+    margin-bottom: 3vh;
+}
+
+.cluster-two {
+    margin-bottom: 3vh;
+}
+
+.search-container {
+    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.search-container input[type=text] {
+    float: left;
+    border: none;
+    height: 30px;
+    width: 90%;
+}
+
+
